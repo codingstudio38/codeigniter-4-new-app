@@ -1,0 +1,60 @@
+CRITICAL - 2022-05-09 17:51:26 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-05-09 17:51:26 --> Uncaught ErrorException: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\codeIgniter\new-app\system\Validation\FormatRules.php:253
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strtolower(): P...', 'C:\\xampp\\htdocs...', 253)
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\Validation\FormatRules.php(253): strtolower(NULL)
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\HTTP\RequestTrait.php(151): CodeIgniter\Validation\FormatRules->valid_ip('::1')
+#3 C:\xampp\htdocs\codeIgniter\new-app\app\Views\errors\html\error_exception.php(206): CodeIgniter\HTTP\Request->getIPAddress()
+#4 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(229): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(232): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#6 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(116): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\FrameworkException), 500)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#8 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-09 17:52:04 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-05-09 17:52:04 --> Uncaught ErrorException: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\codeIgniter\new-app\system\Validation\FormatRules.php:253
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strtolower(): P...', 'C:\\xampp\\htdocs...', 253)
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\Validation\FormatRules.php(253): strtolower(NULL)
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\HTTP\RequestTrait.php(151): CodeIgniter\Validation\FormatRules->valid_ip('::1')
+#3 C:\xampp\htdocs\codeIgniter\new-app\app\Views\errors\html\error_exception.php(206): CodeIgniter\HTTP\Request->getIPAddress()
+#4 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(229): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(232): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#6 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(116): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\FrameworkException), 500)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#8 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-09 17:52:40 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-05-09 17:52:40 --> Uncaught ErrorException: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\codeIgniter\new-app\system\Validation\FormatRules.php:253
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strtolower(): P...', 'C:\\xampp\\htdocs...', 253)
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\Validation\FormatRules.php(253): strtolower(NULL)
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\HTTP\RequestTrait.php(151): CodeIgniter\Validation\FormatRules->valid_ip('::1')
+#3 C:\xampp\htdocs\codeIgniter\new-app\app\Views\errors\html\error_exception.php(206): CodeIgniter\HTTP\Request->getIPAddress()
+#4 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(229): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(232): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#6 C:\xampp\htdocs\codeIgniter\new-app\system\Debug\Exceptions.php(116): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\FrameworkException), 500)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#8 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

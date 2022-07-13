@@ -1,0 +1,8 @@
+CRITICAL - 2022-06-15 05:17:09 --> Invalid file: user/email-template.php
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/email-temp...')
+#1 C:\xampp\htdocs\codeIgniter\new-app\app\Controllers\EmailController.php(43): CodeIgniter\View\View->render('user/email-temp...')
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->send()
+#3 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#4 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

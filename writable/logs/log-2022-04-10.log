@@ -1,0 +1,44 @@
+CRITICAL - 2022-04-10 01:59:00 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::All()
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->send()
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-10 02:00:08 --> Call to undefined method App\Controllers\EmailController::input()
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->send()
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-10 02:00:17 --> Undefined property: App\Controllers\EmailController::$input
+#0 C:\xampp\htdocs\codeIgniter\new-app\app\Controllers\EmailController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->send()
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#3 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-10 02:00:36 --> Call to undefined method App\Controllers\EmailController::post()
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->send()
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-10 03:57:48 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::getInput()
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->send()
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-04-10 04:12:24 --> Email: sendWithSmtp throwed fsockopen(): php_network_getaddresses: getaddrinfo failed: No such host is known. 
+CRITICAL - 2022-04-10 04:12:24 --> Undefined index: status
+#0 C:\xampp\htdocs\codeIgniter\new-app\app\Views\user\email.php(143): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 143, Array)
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\codeIgniter\new-app\system\Common.php(1097): CodeIgniter\View\View->render('user/email', Array, true)
+#4 C:\xampp\htdocs\codeIgniter\new-app\app\Controllers\EmailController.php(14): view('user/email', Array)
+#5 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\EmailController->index()
+#6 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmailController))
+#7 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-04-10 04:13:11 --> Email: sendWithSmtp throwed fsockopen(): php_network_getaddresses: getaddrinfo failed: No such host is known. 
