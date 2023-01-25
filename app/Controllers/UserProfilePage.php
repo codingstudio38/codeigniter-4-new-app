@@ -48,6 +48,7 @@ class UserProfilePage extends BaseController
             'userdata'=>$builderuser,
             'userLogindata'=>$userLogindata
         ];
+        
         echo view('user/profile',$data);
     }
     public function updatephoto()
