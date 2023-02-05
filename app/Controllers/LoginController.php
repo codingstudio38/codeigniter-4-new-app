@@ -37,8 +37,8 @@ class LoginController extends BaseController
             'Password'=>'required|min_length[8]',
             'Confirm_Password'=>'required|min_length[8]|matches[Password]'
         ],
-        [ 
-            'Name' =>[ 
+        [  
+            'Name' =>[  
                 "required" => "Name required.",
             ],
            'Email_Id' =>[ 

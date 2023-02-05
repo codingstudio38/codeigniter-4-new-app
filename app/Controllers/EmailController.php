@@ -37,13 +37,12 @@ class EmailController extends BaseController
                 'message'=> $message
                ];
                $email = \Config\Services::email();
-
+ 
 // for template desigen
                $view = \Config\Services::renderer();
                $new_message = $view->setVar('data', $data)->render('email-template');
                $email->setTo($to);
                $email->setFrom("onlinemessages0001@gmail.com","Online Message");
-
                $email->setSubject($subject);
                $email->setMessage($new_message);
 // for template desigen
