@@ -38,8 +38,8 @@ $routes->group("/",['filter'=>'Guest'], function($routes){
     $routes->post('register', 'LoginController::create');
     $routes->post('loginUser', 'LoginController::verify');   
 });
- 
-   
+  
+    
 $routes->group("user",['filter'=>'LoggedinCheck'], function($routes){
     $routes->get('/', 'UserProfilePage::index');
     $routes->get('profile', 'UserProfilePage::profile');

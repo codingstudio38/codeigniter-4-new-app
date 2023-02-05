@@ -1,0 +1,13 @@
+CRITICAL - 2023-02-04 20:42:12 --> Call to undefined method App\Controllers\LoginController::validvate()
+#0 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\LoginController->verify()
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-02-04 20:48:30 --> Undefined variable: error
+#0 C:\xampp\htdocs\codeIgniter\new-app\app\Controllers\LoginController.php(101): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 101, Array)
+#1 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(824): App\Controllers\LoginController->verify()
+#2 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#3 C:\xampp\htdocs\codeIgniter\new-app\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\codeIgniter\new-app\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

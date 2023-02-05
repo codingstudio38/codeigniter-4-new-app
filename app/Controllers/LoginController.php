@@ -10,7 +10,7 @@ use Config\Services;
 use CodeIgniter\I18n\Time;
 
 class LoginController extends BaseController
-{
+{ 
     private $usersModel=null;
     private $profilesModel=null;
     private $logindetailsModel=null;
@@ -23,7 +23,7 @@ class LoginController extends BaseController
     }
     public function register()
     {
-        $data = [
+        $data = [ 
             'title'=>'Rgister Page'
         ];
         echo view('register',$data);
@@ -36,6 +36,30 @@ class LoginController extends BaseController
             'Phone_No'=>'required|max_length[10]|is_unique[users.phone]',
             'Password'=>'required|min_length[8]',
             'Confirm_Password'=>'required|min_length[8]|matches[Password]'
+        ],
+        [ 
+            'Name' =>[ 
+                "required" => "Name required.",
+            ],
+           'Email_Id' =>[ 
+                "required" => "Email required.",
+                "valid_email" => "The email must be a valid email address.",
+                "min_length" => "The email must be a greater than 6 characters."
+            ],
+           'Phone_No' =>[ 
+                "required" => "Email required.",
+                "max_length" => "The phone no must be a less than 10 digit.",
+                "is_unique" => "The phone no already taken. Try different.."
+            ],
+           'Password' =>[ 
+                "required" => "Password required.",
+                "min_length" => "The password must be a greater than 8 characters."
+            ],
+            'Confirm_Password' =>[ 
+                "required" => "Password required.",
+                "min_length" => "The confirm password must be a greater than 8 characters.",
+                "matches" => "The confirm password not matching with password.",
+            ],
         ]);
         if($validtion_msg == false){ 
             $error =$this->validation->getErrors(); 
@@ -90,6 +114,14 @@ class LoginController extends BaseController
         $validtion = $this->validate([
             'Email_Id'=>'required|valid_email|min_length[6]',
             'Password'=>'required'
+        ],
+        [ 
+           'Email_Id' =>[ 
+                "required" => "Email required.",
+                "valid_email" => "The email must be a valid email address.",
+                "min_length" => "The email must be a greater than 6 characters."
+            ],
+           'Password' =>[ "required" => "Password required."],
         ]);
         if($validtion == false){
             $error =$this->validation->getErrors(); 
