@@ -115,7 +115,7 @@ class LoginController extends BaseController
             'Email_Id'=>'required|valid_email|min_length[6]',
             'Password'=>'required'
         ],
-        [ 
+        [  
            'Email_Id' =>[ 
                 "required" => "Email required.",
                 "valid_email" => "The email must be a valid email address.",

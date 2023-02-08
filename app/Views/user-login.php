@@ -164,7 +164,7 @@ $cssinvalid = "style='border: 2px solid #dc3545 !important;
 $errors = null;
 if(session()->getFlashdata('error_msg') != null) : 
 $errors = session()->getFlashdata('error_msg');
-endif ;
+endif ; 
 $cssvalid = "style='border: 2px solid #198754 !important;
     padding-right: calc(1.5em + 0.75rem) !important;
     background-image: url(assets/images/download.svg) !important;

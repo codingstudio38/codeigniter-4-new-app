@@ -15,7 +15,7 @@ class LoggedIn implements FilterInterface
 			$user = $session->get('user');
 			if($user['isLoggedIn']){
 				return true;
-			} else {
+			} else { 
 				$session->setFlashdata('errorsMsg','You Are Not LoggedIn..!!');
 				$this->session->remove('user');
 		        return redirect('login');
