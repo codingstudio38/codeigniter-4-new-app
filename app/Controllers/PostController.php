@@ -72,7 +72,7 @@ class PostController extends BaseController
     }
 
     public function viewpost()
-    {
+    { 
         $query = $this->postModel->where('userId =',1)->get();
         $alldata = $query->getResultArray();
         $data = [

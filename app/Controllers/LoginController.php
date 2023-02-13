@@ -160,7 +160,7 @@ class LoginController extends BaseController
                     $this->session->setFlashdata('errorsMsg','LogIn Failed..!!');
                     return redirect('login');
                 }
-            }
+            } 
         }
     }
 
