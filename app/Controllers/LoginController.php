@@ -146,7 +146,7 @@ $facebook_user = array();
 $fbloginbutton = "" ;
 
 
-    $facebook = new \ Facebook\Facebook(array(
+    $facebook = new \Facebook\Facebook(array(
         "app_id"=>"1589430858170618",
         "app_secret"=>"d621b2eb8bbc8d0da6567bbc1a560398",
         "default_graph_version"=>"v2.3"
