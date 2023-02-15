@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/vendor/bootstrap-icons/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/vendor/tiny-slider/tiny-slider.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/vendor/glightbox/css/glightbox.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Theme CSS -->
 	<link id="style-switch" rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/style.css">
 
@@ -202,14 +202,25 @@ $cssinvalid = "style='border: 2px solid #dc3545 !important;
                     <div class="error"><?= $errors['Email_Id']; ?></div>
                 <?php }  ?>
             </div>
-            <div class="mb-3">
+            <div class="mb-3"> 
               <input type="password" class="form-control"  name="Password"  id="password" value="<?=old('Password') ?>" placeholder="Password"  <?php if(!$errors==null){ if(isset($errors['Password'])){echo $cssinvalid;} else { echo $cssvalid;}} ?>>
               <?php if(isset($errors['Password'])){ ?> 
                     <div class="error"><?= $errors['Password']; ?></div>
                 <?php }  ?>
-            </div>
+            </div> 
+
             <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-2 w-100">Login</button></div>
-           
+            <div style=" text-align: center; margin-top: 5px; ">
+    <p>OR</p>
+</div>
+ <?php if(isset($loginbutton)){ ?>
+<a href="<?= $loginbutton; ?>" style=" background-color: #ed430c !important; border-color: #ff0000 !important; margin-top:-5px; color:white !important;width: -webkit-fill-available;" class="btn btn-danger"><i style="margin-right:5px;" class="fa fa-google" aria-hidden="true"></i> Login with Google</a>
+<?php } ?>
+  
+    
+ <?php if(isset($fbloginbutton)){ ?> 
+<a href="<?= $fbloginbutton; ?>" style="background-color: #665dd8  !important; border-color: #665dd8  !important; color:white !important;width: -webkit-fill-available;" class="btn btn-danger"><i style="margin-right:5px;" class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook</a>
+  <?php } ?>         
             <a href="register" style="width: 100%;" class="btn btn-warning btn-block mb-2">Create an Account</a>
           </form>
         </div>

@@ -97,12 +97,107 @@ class LoginController extends BaseController
             }
         }
     }
-
+ 
     public function login()
-    {
+    { 
+    //1- app\Libraries -> composer init
+    //2- composer require google/apiclient:^2.12.1
+    // facebook
+    //1- composer require facebook/graph-sdk
+    require APPPATH."Libraries/vendor/autoload.php";
+$code="";
+
+$googleuser = array();
+$loginbutton ="";
+session()->remove("access_token");
+session()->remove("fb_access_token");
+
+
+    $google_client = new \Google_Client();
+    $google_client->setClientId("405380673874-cbp1ep7r2otbtrt75cu4chs4ug9hk6e4.apps.googleusercontent.com");
+    $google_client->setClientSecret("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");
+    $google_client->setRedirectUri(base_url().'/login?login_type=google'); 
+    $google_client->addScope('email'); 
+    $google_client->addScope('profile'); 
+
+    if(!$this->session->get("access_token")){
+        $loginbutton = $google_client->createAuthUrl();
+    }
+
+
+if(isset($_GET['login_type']) && $_GET['login_type']=="google"){
+    if($this->request->getVAr('code')){ 
+    $code=$this->request->getVAr('code');
+    $token = $google_client->fetchAccessTokenWithAuthCode($code);
+        if(!isset($token['error'])){
+            $google_client->setAccessToken($token['access_token']);
+            $this->session->set('access_token',$token['access_token']);
+            $google_service = new \Google_Service_Oauth2($google_client);
+            $googleuser = $google_service->userinfo->get();
+        echo "<pre>";
+        print_r($googleuser);
+        echo "</pre>";
+        }
+    }
+}
+
+
+$facebook_user = array();
+$fbloginbutton = "" ;
+
+
+    $facebook = new \ Facebook\Facebook(array(
+        "app_id"=>"1589430858170618",
+        "app_secret"=>"d621b2eb8bbc8d0da6567bbc1a560398",
+        "default_graph_version"=>"v2.3"
+    ));
+    $fb_helper = $facebook->getRedirectLoginHelper();
+    $fbloginbutton = $fb_helper->getLoginUrl("https://localhost/codeIgniter/new-app/login?login_type=fb",array("email"));
+
+if(isset($_GET['login_type']) && $_GET['login_type']=="fb"){
+    if($this->request->getVAr('state')){
+        $fb_helper->getPersistentDataHandler()->set("state",$this->request->getVAr('state'));
+    }    
+
+    if($this->request->getVAr('code')){
+     $code=$this->request->getVAr('code');
+     if($this->session->get("fb_access_token")){
+            $fb_access_token = $this->session->get("fb_access_token");
+        } else{
+            $fb_access_token = $fb_helper->getAccessToken();
+            // echo $fb_access_token;
+            $this->session->set("fb_access_token",$fb_access_token);
+            $facebook->setDefaultAccessToken($fb_access_token);
+        }
+        $graph_response = $facebook->get('/me?fields=name,email,id,first_name,last_name,link,gender,locale,picture',$fb_access_token);
+        $facebook_user = $graph_response->getGraphUser();
+        if(isset($facebook_user['id'])){
+             // https://graph.facebook.com/$facebook_user['id']/picture
+            echo "<pre>";
+            print_r($facebook_user);
+            echo "</pre>";
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
        $data = [
-            'title'=>'User Login'
+            'title'=>'User Login',
+            'googleuser'=>$googleuser,
+            'facebook_user'=>$facebook_user,
+            'loginbutton'=>$loginbutton,
+            'fbloginbutton'=>$fbloginbutton
         ];
+        // echo "<pre>";
+        // print_r($googleuser);
+        // echo "</pre>";
         echo view('user-login',$data);
     }
 

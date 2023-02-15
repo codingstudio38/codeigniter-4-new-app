@@ -1,0 +1,19 @@
+{
+    "name": "google/login",
+    "description": "google login with ci 4",
+    "autoload": {
+        "psr-4": {
+            "Google\\Login\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "v",
+            "email": "mondalbdyut@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "2.12.1",
+        "facebook/graph-sdk": "^5.7"
+    }
+}
