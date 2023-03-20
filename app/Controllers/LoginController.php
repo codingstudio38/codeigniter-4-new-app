@@ -10,7 +10,7 @@ use Config\Services;
 use CodeIgniter\I18n\Time;
 
 class LoginController extends BaseController
-{
+{ 
     private $usersModel = null;
     private $profilesModel = null;
     private $logindetailsModel = null;
@@ -29,7 +29,7 @@ class LoginController extends BaseController
         ];
         echo view('register', $data);
     }
-    public function create()
+    public function create() 
     {
         $validtion_msg = $this->validate(
             [
@@ -88,7 +88,7 @@ class LoginController extends BaseController
                     'state' => null,
                     'country' => null,
                     'thumbnail' => null,
-                ];
+                ]; 
                 $result = $this->profilesModel->save($data);
                 if ($result) {
                     $this->session->setFlashdata('successMsg', 'User Account Create Successfully. Please Login..');
