@@ -38,7 +38,7 @@ $routes->get('/', 'Home::index');
 
  
 
-
+// https://www.binaryboxtuts.com/php-tutorials/codeigniter-4-json-web-tokenjwt-authentication/
 $routes->group("/",['filter'=>'Guest'], function($routes){
     $routes->get('login', 'LoginController::login');
     $routes->get('register', 'LoginController::register');
