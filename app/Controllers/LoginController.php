@@ -163,7 +163,7 @@ class LoginController extends BaseController
             if ($this->request->getVAr('state')) {
                 $fb_helper->getPersistentDataHandler()->set("state", $this->request->getVAr('state'));
             }
-
+   
             if ($this->request->getVAr('code')) {
                 $code = $this->request->getVAr('code');
                 if ($this->session->get("fb_access_token")) {
