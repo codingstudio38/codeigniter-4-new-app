@@ -114,7 +114,7 @@ class LoginController extends BaseController
         $loginbutton = "";
         session()->remove("access_token");
         session()->remove("fb_access_token");
-
+ 
 
         $google_client = new \Google_Client();
         $google_client->setClientId("405380673874-cbp1ep7r2otbtrt75cu4chs4ug9hk6e4.apps.googleusercontent.com");
